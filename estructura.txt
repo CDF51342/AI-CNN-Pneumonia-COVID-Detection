@@ -1,0 +1,81 @@
+Notebook 1: Preprocesamiento y Data Augmentation
+	•	Objetivo: Preparar el dataset de radiografías para ambos clasificadores.
+	•	Secciones Sugeridas:
+	•	Carga y Visualización de Datos:
+	•	Importar imágenes y visualizar ejemplos.
+	•	Preprocesamiento General:
+	•	Conversión de formatos, redimensionamiento, recorte y normalización.
+	•	Data Augmentation:
+	•	Aplicar técnicas de aumento (rotaciones, flips, traslaciones, etc.) y mostrar ejemplos.
+	•	Guardado del Dataset Procesado:
+	•	Opcionalmente, almacenar las imágenes preprocesadas para reutilizarlas en ambos modelos.
+
+----------
+
+Clasificador 1 – Detección de COVID-19 (Clasificación Binaria)
+
+Notebook 2: Entrenamiento del Clasificador 1
+	•	Objetivo: Definir y entrenar la CNN para la detección binaria de COVID-19.
+	•	Secciones Sugeridas:
+	•	Configuración Inicial y Carga del Dataset:
+	•	Importar el dataset preprocesado.
+	•	Definición del Modelo:
+	•	Crear la arquitectura CNN (desde cero o mediante transfer learning).
+	•	Compilación del Modelo:
+	•	Configurar la función de pérdida (binary cross-entropy) y el optimizador (por ejemplo, Adam).
+	•	Entrenamiento:
+	•	Dividir el dataset en entrenamiento, validación y test.
+	•	Entrenar el modelo utilizando callbacks (early stopping, checkpoints) y guardar el progreso.
+	•	Registro de Resultados:
+	•	Guardar gráficos de loss y accuracy durante el entrenamiento.
+
+Notebook 3: Evaluación y Activation Mapping del Clasificador 1
+	•	Objetivo: Evaluar el rendimiento del clasificador 1 y analizar sus interpretaciones.
+	•	Secciones Sugeridas:
+	•	Evaluación del Modelo:
+	•	Cargar el modelo entrenado.
+	•	Calcular métricas clave (precisión, AUC-ROC, sensibilidad, etc.) en el conjunto de test.
+	•	Visualización de Resultados:
+	•	Graficar la curva ROC y la evolución de las métricas.
+	•	Activation Mapping:
+	•	Implementar Grad-CAM (u otro método) para generar mapas de activación.
+	•	Visualizar y analizar mapas de calor en ejemplos representativos (casos correctos e incorrectos).
+
+----------
+
+Clasificador 2 – Clasificación Multiclase
+
+Notebook 4: Entrenamiento del Clasificador 2
+	•	Objetivo: Definir y entrenar la CNN para la clasificación multiclase.
+	•	Secciones Sugeridas:
+	•	Configuración Inicial y Carga del Dataset:
+	•	Reutilizar el dataset preprocesado.
+	•	Definición del Modelo:
+	•	Crear la arquitectura CNN adecuada para una tarea multiclase.
+	•	Compilación del Modelo:
+	•	Configurar la función de pérdida (categorical cross-entropy) y el optimizador.
+	•	Entrenamiento:
+	•	Dividir el dataset, entrenar el modelo con callbacks y guardar checkpoints.
+	•	Registro de Resultados:
+	•	Guardar gráficos de la evolución de la pérdida y la precisión.
+
+Notebook 5: Evaluación y Activation Mapping del Clasificador 2
+	•	Objetivo: Evaluar el desempeño del clasificador 2 y generar interpretaciones con Activation Mapping.
+	•	Secciones Sugeridas:
+	•	Evaluación del Modelo:
+	•	Cargar el modelo entrenado para la clasificación multiclase.
+	•	Calcular métricas (precisión global, AUC-ROC por clase, etc.) y visualizar resultados.
+	•	Visualización de Resultados:
+	•	Graficar curvas ROC para cada clase, si aplica, y otras métricas.
+	•	Activation Mapping:
+	•	Implementar y aplicar técnicas de Activation Mapping para visualizar qué áreas de las radiografías influyen en la decisión para cada clase.
+	•	Comparar ejemplos y discutir diferencias con el clasificador binario.
+
+-----------
+
+Documentación Final (PDF)
+	•	Contenido del PDF:
+	•	Resumen ejecutivo y abstract gráfico.
+	•	Descripción detallada de cada etapa: preprocesamiento, arquitecturas de los clasificadores, parámetros de entrenamiento, y análisis de resultados.
+	•	Tablas y gráficos resumen de los resultados para ambos modelos.
+	•	Discusión sobre la utilidad clínica, limitaciones y posibles mejoras.
