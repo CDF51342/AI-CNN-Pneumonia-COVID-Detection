@@ -1,0 +1,11 @@
+{
+    "filters_1": 32,
+    "dropout_1": 0.30000000000000004,
+    "filters_2": 96,
+    "dropout_2": 0.2,
+    "filters_3": 128,
+    "dropout_3": 0.3,
+    "dense_units": 192,
+    "dropout_dense": 0.3,
+    "learning_rate": 0.001
+}
